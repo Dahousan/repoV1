@@ -55,55 +55,49 @@ const CompleteDoctorProfile = () => {
 
   return (
     <div className="container mt-4" style={{ maxWidth: '600px' }}>
-    <h2 className="mb-4">
+      <h2 className="mb-4">
+        <Translate contentKey="CompleteDoctorProfile.title">Complete Doctor Profile</Translate>
+      </h2>
 
-    <Translate contentKey="CompleteDoctorProfile.title">
+      {error && (
+        <Alert color="danger" className="text-center">
+          {error}
+        </Alert>
+      )}
 
-           Complete Doctor Profile
+      <div className="mb-3">
+        <input className="form-control mb-2" placeholder="INPE Code" value={inpeCode} onChange={e => setInpeCode(e.target.value)} />
+        <input
+          className="form-control mb-2"
+          placeholder="Latitude"
+          type="number"
+          value={latitude}
+          onChange={e => setLatitude(e.target.value)}
+        />
+        <input
+          className="form-control mb-2"
+          placeholder="Longitude"
+          type="number"
+          value={longitude}
+          onChange={e => setLongitude(e.target.value)}
+        />
+        <input
+          className="form-control mb-2"
+          placeholder="Office Address"
+          value={officeAddress}
+          onChange={e => setOfficeAddress(e.target.value)}
+        />
+        <input
+          className="form-control mb-2"
+          placeholder="Phone Number"
+          value={phoneNumber}
+          onChange={e => setPhoneNumber(e.target.value)}
+        />
+      </div>
 
-    </Translate>
-
-    </h2>
-
-    {error && (
-      <Alert color="danger" className="text-center">
-      {error}
-      </Alert>
-    )}
-
-    <div className="mb-3">
-    <input className="form-control mb-2" placeholder="INPE Code" value={inpeCode} onChange={e => setInpeCode(e.target.value)} />
-    <input
-    className="form-control mb-2"
-    placeholder="Latitude"
-    type="number"
-    value={latitude}
-    onChange={e => setLatitude(e.target.value)}
-    />
-    <input
-    className="form-control mb-2"
-    placeholder="Longitude"
-    type="number"
-    value={longitude}
-    onChange={e => setLongitude(e.target.value)}
-    />
-    <input
-    className="form-control mb-2"
-    placeholder="Office Address"
-    value={officeAddress}
-    onChange={e => setOfficeAddress(e.target.value)}
-    />
-    <input
-    className="form-control mb-2"
-    placeholder="Phone Number"
-    value={phoneNumber}
-    onChange={e => setPhoneNumber(e.target.value)}
-    />
-    </div>
-
-    <Button color="primary" onClick={submit} disabled={saving}>
-    {saving ? 'Saving…' : 'Save'}
-    </Button>
+      <Button color="primary" onClick={submit} disabled={saving}>
+        {saving ? 'Saving…' : 'Save'}
+      </Button>
     </div>
   );
 };
