@@ -1,0 +1,15 @@
+{
+  "NearbyDoctor": {
+    "prev": "Retour",
+    "spec": "Spécialistes {spec} à proximité",
+    "rad": "Rayon : {radius} km",
+    "sort": "Trier : {sort} ({dir})",
+    "open": "Ouvert maintenant",
+    "load": "Récupération de votre position…",
+    "retry": "Réessayer",
+    "loadfind": "Recherche des médecins à proximité…",
+    "nofound": "Aucun médecin trouvé correspondant à vos critères. Essayez d’élargir votre rayon de recherche.",
+    "openhours": "Heures d’ouverture :",
+    "directions": "Obtenir l’itinéraire"
+  }
+}
