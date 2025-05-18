@@ -200,26 +200,26 @@ export const NearbyDoctors = () => {
           <div className="header-section mb-4">
             <Button color="light" onClick={handleBackClick} className="mb-3">
               <i className="fas fa-arrow-left me-2"></i>
-              <Translate contentkey="NearbyDoctor.prev">Back</Translate>
+              <Translate contentKey="NearbyDoctor.prev">Back</Translate>
             </Button>
             <h2 className="mb-3">
               <i className="fas fa-map-marker-alt me-2 text-primary"></i>
 
-              <Translate contentkey="NearbyDoctor.spec">Nearby {searchParams.spec} Specialists</Translate>
+              <Translate contentKey="NearbyDoctor.spec">Nearby {searchParams.spec} Specialists</Translate>
             </h2>
             <div className="search-params mb-4">
               <Badge color="info" className="me-2">
-                <Translate contentkey="NearbyDoctor.rad">Radius: {searchParams.radius} km</Translate>
+                <Translate contentKey="NearbyDoctor.rad">Radius: {searchParams.radius} km</Translate>
               </Badge>
               <Badge color="info" className="me-2">
-                <Translate contentkey="NearbyDoctor.sort">
+                <Translate contentKey="NearbyDoctor.sort">
                   Sort: {searchParams.sort} ({searchParams.dir})
                 </Translate>
               </Badge>
               {searchParams.openNow && (
                 <Badge color="success">
                   <i className="fas fa-clock me-1"></i>
-                  <Translate contentkey="NearbyDoctor.open">Open Now</Translate>
+                  <Translate contentKey="NearbyDoctor.open">Open Now</Translate>
                 </Badge>
               )}
             </div>
@@ -228,7 +228,7 @@ export const NearbyDoctors = () => {
           {gettingLocation && (
             <Alert color="info" className="d-flex align-items-center">
               <Spinner size="sm" className="me-2" />
-              <Translate contentkey="NearbyDoctor.load">Getting your current location...</Translate>
+              <Translate contentKey="NearbyDoctor.load">Getting your current location...</Translate>
             </Alert>
           )}
 
@@ -239,7 +239,7 @@ export const NearbyDoctors = () => {
                 {locationError}
               </div>
               <Button color="warning" size="sm" onClick={handleRetryLocation}>
-                <Translate contentkey="NearbyDoctor.retry">Retry</Translate>
+                <Translate contentKey="NearbyDoctor.retry">Retry</Translate>
               </Button>
             </Alert>
           )}
@@ -248,14 +248,14 @@ export const NearbyDoctors = () => {
             <div className="text-center py-5">
               <Spinner color="primary" />
               <p className="mt-3">
-                <Translate contentkey="NearbyDoctor.loadfind">Finding nearby doctors...</Translate>
+                <Translate contentKey="NearbyDoctor.loadfind">Finding nearby doctors...</Translate>
               </p>
             </div>
           ) : error ? (
             <Alert color="danger">{error}</Alert>
           ) : doctors.length === 0 ? (
             <Alert color="warning">
-              <Translate contentkey="NearbyDoctor.nofound">
+              <Translate contentKey="NearbyDoctor.nofound">
                 No doctors found matching your criteria. Try expanding your search radius.
               </Translate>
             </Alert>
@@ -269,11 +269,11 @@ export const NearbyDoctors = () => {
                       <div>
                         {doctor.openNow ? (
                           <Badge color="success" pill className="me-2">
-                            <Translate contentkey="NearbyDoctor.open">Open Now</Translate>
+                            <Translate contentKey="NearbyDoctor.open">Open Now</Translate>
                           </Badge>
                         ) : (
                           <Badge color="secondary" pill className="me-2">
-                            <Translate contentkey="NearbyDoctor.close">Closed</Translate>
+                            <Translate contentKey="NearbyDoctor.close">Closed</Translate>
                           </Badge>
                         )}
                         <Badge color="warning" pill>
@@ -295,7 +295,7 @@ export const NearbyDoctors = () => {
                     </div>
                     <div className="opening-hours">
                       <h6 className="mb-2">
-                        <Translate contentkey="NearbyDoctor.openhours">Opening Hours:</Translate>
+                        <Translate contentKey="NearbyDoctor.openhours">Opening Hours:</Translate>
                       </h6>
                       <ul className="list-unstyled">
                         {(doctor.weekdayDescriptions || []).map((desc, i) => (
@@ -313,7 +313,7 @@ export const NearbyDoctors = () => {
                       className="mt-2"
                     >
                       <i className="fas fa-directions me-2"></i>
-                      <Translate contentkey="NearbyDoctor.directions">Get Directions</Translate>
+                      <Translate contentKey="NearbyDoctor.directions">Get Directions</Translate>
                     </Button>
                   </CardBody>
                 </Card>
