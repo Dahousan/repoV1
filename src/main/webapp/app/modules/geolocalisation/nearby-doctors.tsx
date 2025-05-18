@@ -1,4 +1,5 @@
 import './nearby-doctors.scss';
+import { Translate } from 'react-jhipster';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Alert, Col, Row, Button, Card, CardBody, CardText, Badge, Spinner } from 'reactstrap';
