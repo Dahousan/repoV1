@@ -176,10 +176,12 @@ export const Home = () => {
                   <div className="card-body">
                     <h3 className="card-title mb-4">
                       <i className="fas fa-stethoscope me-2"></i>
-                      Symptom Analysis
+                      <Translate contentKey="symptom_analysis.title">Symptom Analysis</Translate>
                     </h3>
                     <p className="text-muted mb-4">
-                      Describe your symptoms and we&apos;ll suggest the most appropriate medical specialists for your condition.
+                      <Translate contentKey="symptom_analysis.Symptom Checker">
+                        Describe your symptoms and we&apos;ll suggest the most appropriate medical specialists for your condition.
+                      </Translate>
                     </p>
 
                     <Form onSubmit={handleSubmit}>
@@ -200,12 +202,13 @@ export const Home = () => {
                         {isLoading ? (
                           <>
                             <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                            Analyzing...
+                            <Translate contentKey="symptom_analysis.analyse">Analyzing...</Translate>
                           </>
                         ) : (
                           <>
                             <i className="fas fa-search me-2"></i>
-                            Analyze Symptoms
+
+                            <Translate contentKey="symptom_analysis.analysed">Analyze Symptoms</Translate>
                           </>
                         )}
                       </Button>
@@ -213,14 +216,19 @@ export const Home = () => {
 
                     {suggestions.length > 0 && (
                       <div className="mt-4">
-                        <h5 className="mb-3">Recommended Specialists:</h5>
+                        <h5 className="mb-3">
+                          <Translate contentKey="suggestions.title">Recommended Specialists:</Translate>
+                        </h5>
                         <div className="suggestions-grid">
                           {suggestions.map((suggestion, index) => (
                             <div key={index} className="suggestion-card">
                               <Alert color={getConfidenceColor(suggestion.confidence)} className="rounded-lg">
                                 <div className="d-flex justify-content-between align-items-start">
                                   <h5 className="mb-2">{suggestion.specialization}</h5>
-                                  <span className="badge bg-white text-dark">{Math.round(suggestion.confidence * 100)}% confidence</span>
+                                  <span className="badge bg-white text-dark">
+                                    {Math.round(suggestion.confidence * 100)}%
+                                    <Translate contentKey="suggestions.confidence">confidence</Translate>
+                                  </span>
                                 </div>
                                 <p className="mb-0">{suggestion.reason}</p>
                               </Alert>
@@ -239,15 +247,24 @@ export const Home = () => {
                   <div className="card-body">
                     <h3 className="card-title mb-4">
                       <i className="fas fa-map-marker-alt me-2"></i>
-                      Find Nearby Doctors
+
+                      <Translate contentKey="doctors.title">Find Nearby Doctors</Translate>
                     </h3>
-                    <p className="text-muted mb-4">Search for medical specialists in your area with specific criteria.</p>
+                    <p className="text-muted mb-4">
+                      <Translate contentKey="Doctors.description">
+                        Search for medical specialists in your area with specific criteria.
+                      </Translate>
+                    </p>
 
                     <Form>
                       <FormGroup>
-                        <Label for="specialization">Specialization</Label>
+                        <Label for="specialization">
+                          <Translate contentKey="doctors.specialization">Specialization</Translate>
+                        </Label>
                         <Input type="select" id="specialization" value={selectedSpec} onChange={e => setSelectedSpec(e.target.value)}>
-                          <option value="">Select a specialization</option>
+                          <option value="">
+                            <Translate contentKey="doctors.select">Select a specialization</Translate>
+                          </option>
                           {specializations.map(spec => (
                             <option key={spec.id} value={spec.name}>
                               {spec.name}
@@ -257,7 +274,9 @@ export const Home = () => {
                       </FormGroup>
 
                       <FormGroup>
-                        <Label for="radius">Search Radius: {radius} km</Label>
+                        <Label for="radius">
+                          <Translate contentKey="doctors.select">Search Radius: {radius} km</Translate>
+                        </Label>
                         <div className="d-flex align-items-center">
                           <input
                             type="range"
@@ -269,34 +288,46 @@ export const Home = () => {
                             value={radius}
                             onChange={e => setRadius(parseInt(e.target.value, 10))}
                           />
-                          <span className="badge bg-primary">{radius} km</span>
+                          <span className="badge bg-primary">
+                            <Translate contentKey="doctors.distance">{radius} km</Translate>
+                          </span>
                         </div>
                       </FormGroup>
 
                       <FormGroup check>
                         <Input type="checkbox" id="openNow" checked={openNowOnly} onChange={e => setOpenNowOnly(e.target.checked)} />
                         <Label for="openNow" check>
-                          Only show currently open
+                          <Translate contentKey="doctors.message">Only show currently open</Translate>
                         </Label>
                       </FormGroup>
 
                       <FormGroup>
-                        <Label for="sortBy">Sort By</Label>
+                        <Label for="sortBy">
+                          <Translate contentKey="doctors.sort">Sort By</Translate>
+                        </Label>
                         <div className="d-flex">
                           <Input type="select" id="sortBy" value={sortBy} onChange={e => setSortBy(e.target.value)} className="me-2">
-                            <option value="distance">Distance</option>
-                            <option value="rating">Rating</option>
+                            <option value="distance">
+                              <Translate contentKey="doctors.sorteddistance">Distance</Translate>
+                            </option>
+                            <option value="rating">
+                              <Translate contentKey="doctors.sortedratings">Rating</Translate>
+                            </option>
                           </Input>
                           <Input type="select" value={sortDir} onChange={e => setSortDir(e.target.value)}>
-                            <option value="asc">Ascending</option>
-                            <option value="desc">Descending</option>
+                            <option value="asc">
+                              <Translate contentKey="doctors.Ascending">Ascending</Translate>
+                            </option>
+                            <option value="desc">
+                              <Translate contentKey="doctors.Descending">Descending</Translate>
+                            </option>
                           </Input>
                         </div>
                       </FormGroup>
 
                       <Button color="primary" onClick={handleFindDoctors} className="w-100 py-2 mt-3" disabled={!selectedSpec}>
                         <i className="fas fa-search-location me-2"></i>
-                        Find Doctors
+                        <Translate contentKey="doctors.finddoc">Find Doctors</Translate>
                       </Button>
                     </Form>
                   </div>

@@ -3,17 +3,54 @@
     "title": "Willkommen, Java Hipster!",
     "subtitle": "Dies ist Ihre Hauptseite",
     "logged": {
-      "message": "Sie sind als Benutzer \"{{username}}\" angemeldet."
+      "message": "Sie sind angemeldet als Benutzer \"{{username}}\"."
     },
     "question": "Wenn Sie Fragen zu JHipster haben:",
     "link": {
-      "homepage": "JHipster Hauptseite",
+      "homepage": "JHipster-Homepage",
       "stackoverflow": "JHipster auf Stack Overflow",
-      "bugtracker": "JHipster Fehlereinträge",
-      "chat": "JHipster Chat",
-      "follow": "kontaktieren Sie uns mit @jhipster auf Twitter"
+      "bugtracker": "JHipster-Bugtracker",
+      "chat": "Öffentlicher JHipster-Chat",
+      "follow": "folgen Sie @jhipster auf Twitter"
     },
-    "like": "Wenn Sie JHipster mögen, vergessen Sie nicht uns einen Stern zu geben auf",
+    "like": "Wenn Ihnen JHipster gefällt, vergessen Sie nicht, uns einen Stern auf",
     "github": "GitHub"
+  },
+  "global": {
+    "messages": {
+      "info": {
+        "authenticated": {
+          "prefix": "Wenn Sie sich ",
+          "link": "anmelden",
+          "suffix": ", können Sie die Standardkonten ausprobieren:\n- Administrator (Benutzername=\"admin\" und Passwort=\"admin\")\n- Benutzer (Benutzername=\"user\" und Passwort=\"user\")."
+        }
+      }
+    }
+  },
+  "symptom_analysis": {
+    "title": "Symptomanalyse",
+    "Symptom Checker": "Beschreiben Sie Ihre Symptome, und wir schlagen Ihnen die am besten geeigneten medizinischen Spezialisten vor.",
+    "analyse": "Analyse läuft...",
+    "analysed": "Symptome analysieren"
+  },
+  "suggestions": {
+    "title": "Empfohlene Spezialisten:",
+    "confidence": "Vertrauen"
+  },
+  "Doctors": {
+    "description": "Suchen Sie nach medizinischen Spezialisten in Ihrer Umgebung mit bestimmten Kriterien."
+  },
+  "doctors": {
+    "title": "Ärzte in der Nähe finden",
+    "specialization": "Fachgebiet",
+    "select": "Spezialisierung auswählen",
+    "distance": "{distance} km",
+    "message": "Nur aktuell geöffnete anzeigen",
+    "sort": "Sortieren nach",
+    "sorteddistance": "Entfernung",
+    "sortedratings": "Bewertung",
+    "Ascending": "Aufsteigend",
+    "Descending": "Absteigend",
+    "finddoc": "Ärzte finden"
   }
 }

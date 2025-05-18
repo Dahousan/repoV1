@@ -5,7 +5,7 @@
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },
-    "question": "If you have any question on JHipster:",
+    "question": "If you have any question about JHipster:",
     "link": {
       "homepage": "JHipster homepage",
       "stackoverflow": "JHipster on Stack Overflow",
@@ -13,7 +13,44 @@
       "chat": "JHipster public chat room",
       "follow": "follow @jhipster on Twitter"
     },
-    "like": "If you like JHipster, don't forget to give us a star on",
+    "like": "If you like JHipster, don’t forget to give us a star on",
     "github": "GitHub"
+  },
+  "global": {
+    "messages": {
+      "info": {
+        "authenticated": {
+          "prefix": "If you want to ",
+          "link": "sign in",
+          "suffix": ", you can try the default accounts:\n- Administrator (login=\"admin\" and password=\"admin\")\n- User (login=\"user\" and password=\"user\")."
+        }
+      }
+    }
+  },
+  "symptom_analysis": {
+    "title": "Symptom Analysis",
+    "Symptom Checker": "Describe your symptoms and we'll suggest the most appropriate medical specialists for your condition.",
+    "analyse": "Analyzing...",
+    "analysed": "Analyze Symptoms"
+  },
+  "suggestions": {
+    "title": "Recommended Specialists:",
+    "confidence": "confidence"
+  },
+  "Doctors": {
+    "description": "Search for medical specialists in your area with specific criteria."
+  },
+  "doctors": {
+    "title": "Find Nearby Doctors",
+    "specialization": "Specialization",
+    "select": "Select a specialization",
+    "distance": "{distance} km",
+    "message": "Only show currently open",
+    "sort": "Sort By",
+    "sorteddistance": "Distance",
+    "sortedratings": "Rating",
+    "Ascending": "Ascending",
+    "Descending": "Descending",
+    "finddoc": "Find Doctors"
   }
 }

@@ -1,9 +1,9 @@
 {
   "home": {
-    "title": "أهلا وسهلا بك، جافا هبستر!",
+    "title": "مرحباً، Java Hipster!",
     "subtitle": "هذه صفحتك الرئيسية",
     "logged": {
-      "message": "قمت بتسجيل الدخول كمستخدم \"{{username}}\"."
+      "message": "لقد قمتَ بتسجيل الدخول كمستخدم \"{{username}}\"."
     },
     "question": "إذا كان لديك أي سؤال حول JHipster:",
     "link": {
@@ -15,5 +15,42 @@
     },
     "like": "إذا كنت تحب JHipster، لا تنسى أن تعطي لنا نجم على",
     "github": "GitHub"
+  },
+  "global": {
+    "messages": {
+      "info": {
+        "authenticated": {
+          "prefix": "إذا كنت تريد ",
+          "link": "تسجيل الدخول",
+          "suffix": "، يمكنك تجربة الحسابات الافتراضية:\n- المدير (login=\"admin\" وكلمة المرور=\"admin\")\n- المستخدم (login=\"user\" وكلمة المرور=\"user\")."
+        }
+      }
+    }
+  },
+  "symptom_analysis": {
+    "title": "تحليل الأعراض",
+    "Symptom Checker": "صِف أعراضك وسنقترح اختصاصيّين طبيين مناسبين لحالتك.",
+    "analyse": "جاري التحليل…",
+    "analysed": "حلّل الأعراض"
+  },
+  "suggestions": {
+    "title": "الاختصاصات الموصى بها:",
+    "confidence": "ثقة"
+  },
+  "Doctors": {
+    "description": "ابحث عن اختصاصيين طبيين في منطقتك بمعايير محددة."
+  },
+  "doctors": {
+    "title": "ابحث عن أطباء بالقرب منك",
+    "specialization": "التخصص",
+    "select": "اختر تخصصاً",
+    "distance": "{distance} كم",
+    "message": "عرض الأطباء المتاحين حالياً فقط",
+    "sort": "ترتيب حسب",
+    "sorteddistance": "المسافة",
+    "sortedratings": "التقييم",
+    "Ascending": "تصاعدي",
+    "Descending": "تنازلي",
+    "finddoc": "ابحث عن أطباء"
   }
 }
